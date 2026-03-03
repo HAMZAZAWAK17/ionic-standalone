@@ -47,42 +47,44 @@ export class CalculsPage implements OnInit {
  op1: number = 0;
  op2: number = 0;
 
+ result: number = 0;
+
   constructor() { }
 
   ngOnInit() {
   }
 
   add() {
-    if (this.n1 !== null && this.n2 !== null) {
-      this.res = this.n1 + this.n2;
+    if (this.op1 !== null && this.op2 !== null) {
+      this.result = this.op1 + this.op2;
     }
   }
 
   sub() {
-    if (this.n1 !== null && this.n2 !== null) {
-      this.res = this.n1 - this.n2;
+    if (this.op1 !== null && this.op2 !== null) {
+      this.result = this.op1 - this.op2;
     }
   }
 
   mul() {
-    if (this.n1 !== null && this.n2 !== null) {
-      this.res = this.n1 * this.n2;
+    if (this.op1 !== null && this.op2 !== null) {
+      this.result = this.op1 * this.op2;
     }
   }
 
   div() {
-    if (this.n1 !== null && this.n2 !== null) {
-      if (this.n2 !== 0) {
-        this.res = (this.n1 / this.n2).toFixed(2);
+    if (this.op1 !== null && this.op2 !== null) {
+      if (this.op2 !== 0) {
+        this.result = (this.op1 / this.op2).toFixed(2);
       } else {
-        this.res = "Division par zéro impossible";
+        this.result = "Division par zéro impossible";
       }
     }
   }
 
   clear() {
-    this.n1 = null;
-    this.n2 = null;
-    this.res = null;
+    this.op1 = null;
+    this.op2 = null;
+    this.result = null;
   }
 }
