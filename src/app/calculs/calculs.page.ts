@@ -44,10 +44,9 @@ import {
 })
 
 export class CalculsPage implements OnInit {
- op1: number = 0;
- op2: number = 0;
-
- result: number = 0;
+  op1: any = null;
+  op2: any = null;
+  res: any = null;
 
   constructor() { }
 
@@ -56,28 +55,28 @@ export class CalculsPage implements OnInit {
 
   add() {
     if (this.op1 !== null && this.op2 !== null) {
-      this.result = this.op1 + this.op2;
+      this.res = this.op1 + this.op2;
     }
   }
 
   sub() {
     if (this.op1 !== null && this.op2 !== null) {
-      this.result = this.op1 - this.op2;
+      this.res = this.op1 - this.op2;
     }
   }
 
   mul() {
     if (this.op1 !== null && this.op2 !== null) {
-      this.result = this.op1 * this.op2;
+      this.res = this.op1 * this.op2;
     }
   }
 
   div() {
     if (this.op1 !== null && this.op2 !== null) {
       if (this.op2 !== 0) {
-        this.result = (this.op1 / this.op2).toFixed(2);
+        this.res = (this.op1 / this.op2).toFixed(2);
       } else {
-        this.result = "Division par zéro impossible";
+        this.res = "Division par zéro impossible";
       }
     }
   }
@@ -85,6 +84,6 @@ export class CalculsPage implements OnInit {
   clear() {
     this.op1 = null;
     this.op2 = null;
-    this.result = null;
+    this.res = null;
   }
 }
