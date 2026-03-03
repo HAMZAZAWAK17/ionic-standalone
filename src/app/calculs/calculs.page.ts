@@ -26,7 +26,7 @@ import {
   imports: [
     IonContent, 
     IonHeader, 
-    IonTitle, 
+    IonTitle,
     IonToolbar, 
     IonCard, 
     IonCardHeader, 
@@ -44,9 +44,8 @@ import {
 })
 
 export class CalculsPage implements OnInit {
-  n1: number | null = null;
-  n2: number | null = null;
-  res: number | string | null = null;
+ op1: number = 0;
+ op2: number = 0;
 
   constructor() { }
 
