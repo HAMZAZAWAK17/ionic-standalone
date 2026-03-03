@@ -9,14 +9,13 @@ import {
   IonCard, 
   IonCardHeader, 
   IonCardTitle, 
-  IonCardSubtitle, 
   IonCardContent, 
-  IonList, 
   IonItem, 
   IonInput, 
-  IonButton, 
-  IonLabel,
-  IonText
+  IonButton,
+  IonGrid,
+  IonRow,
+  IonCol
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -32,18 +31,18 @@ import {
     IonCard, 
     IonCardHeader, 
     IonCardTitle, 
-    IonCardSubtitle, 
     IonCardContent, 
-    IonList, 
     IonItem, 
     IonInput, 
-    IonButton, 
-    IonLabel,
-    IonText,
+    IonButton,
+    IonGrid,
+    IonRow,
+    IonCol,
     CommonModule, 
     FormsModule
   ]
 })
+
 export class CalculsPage implements OnInit {
   n1: number | null = null;
   n2: number | null = null;
