@@ -1,0 +1,148 @@
+.calculator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  padding: 20px;
+  background: #f0f2f5; // Gris très clair pour le fond de page
+}
+
+.styled-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  margin: 0;
+  overflow: hidden;
+
+  ion-card-header {
+    background: #ffffff;
+    padding: 32px 24px 16px;
+    text-align: center;
+
+    ion-card-title {
+      font-weight: 800;
+      color: #111827;
+      font-size: 1.6rem;
+      letter-spacing: -0.5px;
+    }
+
+    ion-card-subtitle {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #6b7280;
+      font-size: 0.75rem;
+      margin-top: 8px;
+    }
+  }
+
+  ion-card-content {
+    background: #ffffff; // S'assurer que le fond est blanc
+    padding: 0 24px 32px;
+  }
+}
+
+ion-list {
+  background: transparent !important;
+  padding: 0;
+}
+
+.input-item {
+  --background: #f9fafb;
+  --background-focused: #ffffff;
+  --border-radius: 16px;
+  --padding-start: 16px;
+  --highlight-height: 0;
+  margin-bottom: 20px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.item-has-focus {
+    border-color: var(--ion-color-primary);
+    box-shadow: 0 0 0 4px rgba(56, 128, 255, 0.1);
+    transform: translateY(-2px);
+  }
+
+  ion-input {
+    --color: #111827 !important; // Texte saisi en noir foncé
+    --placeholder-color: #9ca3af;
+    --placeholder-opacity: 1;
+    font-size: 1.2rem;
+    font-weight: 600;
+    min-height: 56px;
+
+    &::part(input) {
+      color: #111827;
+    }
+  }
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 8px;
+
+  ion-button {
+    --border-radius: 14px;
+    height: 60px;
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    --box-shadow: none;
+    text-transform: uppercase;
+
+    &::part(native) {
+      transition: all 0.2s ease;
+    }
+
+    &:active {
+      transform: scale(0.96);
+    }
+
+    ion-text {
+      font-size: 1.4rem;
+      margin-left: 8px;
+    }
+  }
+}
+
+.action-buttons {
+  text-align: center;
+  margin-top: 16px;
+
+  ion-button {
+    --color: #6b7280;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+}
+
+.result-box {
+  margin-top: 24px;
+  padding: 24px;
+  background: #f3f4f6;
+  border-radius: 20px;
+  text-align: center;
+  border: 2px solid #e5e7eb;
+
+  .result-label {
+    font-size: 0.8rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .result-value {
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: var(--ion-color-primary);
+    margin: 0;
+    word-break: break-all;
+    line-height: 1;
+  }
+}

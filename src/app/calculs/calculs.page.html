@@ -1,0 +1,71 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-title>Calculateur Premium</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="calculator-container">
+    <ion-card class="styled-card">
+      <ion-card-header>
+        <ion-card-title>Calculs</ion-card-title>
+        <ion-card-subtitle>SDDI 4 - ESTEM 2025</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list lines="none">
+          <!-- Input 1 -->
+          <ion-item class="input-item">
+            <ion-input 
+              label="PREMIER NOMBRE" 
+              labelPlacement="stacked" 
+              type="number" 
+              placeholder="0"
+              [(ngModel)]="n1">
+            </ion-input>
+          </ion-item>
+          
+          <!-- Input 2 -->
+          <ion-item class="input-item">
+            <ion-input 
+              label="DEUXIÈME NOMBRE" 
+              labelPlacement="stacked" 
+              type="number" 
+              placeholder="0"
+              [(ngModel)]="n2">
+            </ion-input>
+          </ion-item>
+
+          <!-- Buttons Operations -->
+          <div class="button-grid">
+            <ion-button expand="block" (click)="add()" color="success">
+              Add <ion-text>+</ion-text>
+            </ion-button>
+            <ion-button expand="block" (click)="sub()" color="warning">
+              Sub <ion-text>-</ion-text>
+            </ion-button>
+            <ion-button expand="block" (click)="mul()" color="tertiary">
+              Mul <ion-text>*</ion-text>
+            </ion-button>
+            <ion-button expand="block" (click)="div()" color="danger">
+              Div <ion-text>/</ion-text>
+            </ion-button>
+          </div>
+
+          <!-- Clear Button -->
+          <div class="action-buttons">
+            <ion-button fill="clear" (click)="clear()">
+              Réinitialiser
+            </ion-button>
+          </div>
+
+          <!-- Result Display -->
+          <div class="result-box" *ngIf="res !== null">
+            <span class="result-label">Résultat Final</span>
+            <p class="result-value">{{ res }}</p>
+          </div>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
