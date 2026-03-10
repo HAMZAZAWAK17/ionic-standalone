@@ -14,4 +14,8 @@ export class HomePage {
   goToCalculs() {
     this.router.navigate(['/calculs']);
   }
+
+  goToJeu(){
+    this.router.navigate(['/jeu']);
+  }
 }
